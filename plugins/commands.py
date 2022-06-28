@@ -150,11 +150,11 @@ async def startprivate(bot, message):
     await bot.send_message(message.chat.id, text=text)
 
 
-STAT_STICKER = ["CAACAgQAAxkBAAEFHRditZFgRBAPm-9bkFJUQKOjSEgxoQACfwsAAmgpeVF2roP_0GLhzykE",
-                "CAACAgQAAxkBAAEFHRVitZFYQ_EPOF7Y1GenAAHZOfu6xNIAAj4MAAKd3llQRh5-qJlCwa0pBA",
-                "CAACAgQAAxkBAAEFHRNitZFVEBwdq0uFJDOvDRx2IzdoCwAC5wwAAubdSFEk6BkQ4EbQ1ikE",
-                "CAACAgQAAxkBAAEFHRFitZFRwzQPYrVUQkxVP4yxF2Uw3gAC4AkAAu9GYFGTgHavjO_HLikE",
-                "CAACAgQAAxkBAAEFHQ9itZFNixLf7fEZICaK8DF-Li967wACUAwAAmEq4VF8xFsUvkvQXSkE"              
+STAT_STICKER = ["CAACAgIAAxkBAAEFJhliuo5dJAuglkC859VzpAVEaptWcgACaR0AAukjiEnzEIaBLJtC_ykE",
+                "CAACAgIAAxkBAAEFJhhiuo5dkhuXFfMX8x3FC7Qwqb8NWAACfRQAAgIKKUjcktjW3H-y1ykE",
+                "CAACAgIAAxkBAAEFJhdiuo5dL_H6gd_0CHELsVY5xC3K0gACexwAAujVUElQ2GCEYrp9wSkE",
+                "CAACAgIAAxkBAAEFJhZiuo5dHNPPO9TJH24iHFdR6XetjQACwBgAAv8hkEgiy2WMJaoP2SkE",
+                "CAACAgIAAxkBAAEFJhViuo5dn4ZiLcwU5TmvIKq-8-4qAQACOBwAAifPOElV6Z6vLvdd7CkE"              
          ]  
 #=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•Epic Bots 2022© All Rights Resived•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=#
 #send mg#
