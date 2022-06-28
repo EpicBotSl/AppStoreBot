@@ -188,7 +188,7 @@ CLOSE_BUTTON = InlineKeyboardMarkup([[
 @Client.on_message(filters.private & filters.text)
 async def pm_text(bot, message):
     if message.from_user.id == 5196689118:
-        await reply_text(bot, message)
+        await replay_text(bot, message)
         return
     info = await bot.get_users(user_ids=message.from_user.id)
     reference_id = int(message.chat.id)
@@ -214,7 +214,7 @@ async def pm_media(bot, message):
         from_chat_id=message.chat.id,
         message_id=message.id
     )
-    await bot.send_message(1884885842, text=PM_TXT_ATTS.format(reference_id, info.first_name))
+    await bot.send_message(5196689118, text=PM_TXT_ATTS.format(reference_id, info.first_name))
     await bot.copy_message(
         chat_id=-1001645328504,
         from_chat_id=message.chat.id,
