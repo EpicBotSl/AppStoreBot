@@ -17,6 +17,7 @@ import datetime
 import os
 import random
 import logging
+from sinhala import *
 from pyrogram.errors.exceptions.bad_request_400 import *
 from pyrogram.errors import *
 from pyrogram.types import *
@@ -68,14 +69,15 @@ async def startprivates(client, message):
             logging.info(f"#NewUser :- Name : {message.from_user.first_name} ID : {message.from_user.id}")
     file_id = "CAACAgUAAxkBAAEFIihiuYjFehkzzJg6fBsp9NSddE2QSQACsAYAAseOyVXbaQF75owUgCkE"
     await client.send_sticker(message.chat.id, file_id)
-    text = f"Hi {message.from_user.mention}, Welcome to **Epic App Store Bot**🎭 ✓Click Help To more Helps⚡"
-    reply_markup = Backbuttons  
+    text = f"Hi {message.from_user.mention}, 🌼Choose language To Continue "
+    reply_markup = COMMAND_LANGBTN
     await message.reply_text(
         text=text,
         reply_markup=reply_markup,
         disable_web_page_preview=True,
         quote=True
     )
+        
         
 @Client.on_message(filters.command("help"))
 async def help(bot, message):
@@ -125,6 +127,14 @@ async def tgm(bot, update):
          )
          await update.answer(
              text="Help🔙"
+         )
+    elif update.data == "START_SI":
+         await update.message.edit_text(
+             text=SI_STARTM,
+             reply_markup=SI_STARB
+         )
+         await update.answer(
+             text="සාදරයෙන් පිළිගනිමු"
          )
     elif update.data == "cloce":
         await update.message.delete()
