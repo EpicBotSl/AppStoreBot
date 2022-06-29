@@ -137,6 +137,14 @@ async def tgm(bot, update):
          await update.answer(
              text="සාදරයෙන් පිළිගනිමු"
          )
+    elif update.data == "SIHELP_CLB":
+         await update.message.edit_text(
+             text=SIHELP_MSG,
+             reply_markup=SIHelp_backbtn
+         )
+         await update.answer(
+             text="😎උපකාර"
+         )
     elif update.data == "cloce":
         await update.message.delete()
 
