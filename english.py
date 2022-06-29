@@ -43,11 +43,11 @@ Ex:- `Minecraft`
                   `𝖤𝗉𝗂𝖼 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋𝗌 𝖢𝗈𝗆𝗉𝖺𝗋𝖺𝗍𝗂𝗈𝗇🇱🇰`
 """
 
-Help_backbtn = InlineKeyboardMarkup([[
+HelpBack_Btn = InlineKeyboardMarkup([[
                 InlineKeyboardButton('🔙', callback_data="HELP_BACK")
             ]])
 
-Backbuttons = InlineKeyboardMarkup([[
+ENSTART_BTN = InlineKeyboardMarkup([[
                 InlineKeyboardButton('🆘HELP🆘', callback_data="HELP_CLB")
             ],
             [
@@ -66,7 +66,7 @@ Backbuttons = InlineKeyboardMarkup([[
             ]
         ])
 
-Back_Msg = "Hi Welcome to **Epic App Store Bot**🎭 ✓Click Help To more Helps⚡"
+ENSTART_MSG = "Hi Welcome to **Epic App Store Bot**🎭 ✓Click Help To more Helps⚡"
 
 STAT_STICKER = ["CAACAgQAAxkBAAEFHRditZFgRBAPm-9bkFJUQKOjSEgxoQACfwsAAmgpeVF2roP_0GLhzykE",
                 "CAACAgQAAxkBAAEFHRVitZFYQ_EPOF7Y1GenAAHZOfu6xNIAAj4MAAKd3llQRh5-qJlCwa0pBA",
