@@ -18,7 +18,7 @@ import os
 import random
 import logging
 from sinhala import *
-import english *
+from english import *
 from pyrogram.errors.exceptions.bad_request_400 import *
 from pyrogram.errors import *
 from pyrogram.types import *
