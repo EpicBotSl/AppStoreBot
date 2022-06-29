@@ -82,7 +82,7 @@ async def startprivates(client, message):
         
 @Client.on_message(filters.command("help"))
 async def help(bot, message):
-  await message.reply_photo("https://telegra.ph/file/6b3bee7715543e8fd6afa.jpg",caption=helps_msg,reply_markup=Help_backbtn)
+  await message.reply_photo("https://telegra.ph/file/6b3bee7715543e8fd6afa.jpg",caption=helps_msg,reply_markup=HelpBack_Btn)
 
 
 DATABASE_URI=DATABASE_URI
@@ -129,7 +129,7 @@ async def tgm(bot, update):
          await update.answer(
              text="</ᴇᴘɪᴄ ʙᴏᴛs <s/ʟ>🇱🇰"
          )
-    elif update.data == "back_Clbs":
+    elif update.data == "SI_CHANGE":
          await update.message.edit_text(
              text=ENSTART_MSG,
              reply_markup=ENSTART_BTN
