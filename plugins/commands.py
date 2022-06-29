@@ -96,38 +96,38 @@ async def tgm(bot, update):
         await update.answer(
              text="Epic Devs",
         )
-    elif update.data == "DevsCallback":
+    elif update.data == "START_EN":
          await update.message.edit_text(
-             text=DEVS_MG,
-             reply_markup=DEVS_BTN,
+             text=ENSTART_MSG,
+             reply_markup=ENSTART_BTN,
              disable_web_page_preview=True
          )
          await update.answer(
-             text="</ᴇᴘɪᴄ ʙᴏᴛs <s/ʟ>🇱🇰",
+             text="Bot Started In English 🇬🇧",
          )  
-    elif update.data == "back_Clbs":
-         await update.message.edit_text(
-             text=Back_Msg,
-             reply_markup=Backbuttons
-         )
-         await update.answer(
-             text="Menu 🔙"
-         )
     elif update.data == "HELP_CLB":
          await update.message.edit_text(
              text=helps_msg,
-             reply_markup=Help_backbtn
+             reply_markup=HelpBack_Btn
          )
          await update.answer(
-             text="This Is Help Menu🌹"
+             text=" Welcome to Help Menu 🌱"
          )
-    elif update.data == "HELP_BACK":
+    elif update.data == "DevsCallback":
          await update.message.edit_text(
-             text=Back_Msg,
-             reply_markup=Backbuttons
+             text=DEVS_MG,
+             reply_markup=DEVS_BTN
          )
          await update.answer(
-             text="Help🔙"
+             text="</ᴇᴘɪᴄ ʙᴏᴛs <s/ʟ>🇱🇰"
+         )
+    elif update.data == "back_Clbs":
+         await update.message.edit_text(
+             text=ENSTART_MSG,
+             reply_markup=ENSTART_BTN
+         )
+         await update.answer(
+             text="Menu 🔙"
          )
     elif update.data == "START_SI":
          await update.message.edit_text(
