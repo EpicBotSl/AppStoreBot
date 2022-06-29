@@ -13,7 +13,7 @@ COMMAND_LANGBTN = InlineKeyboardMarkup([[
       InlineKeyboardButton('සිංහල 🇱🇰', callback_data="START_SI")
       ],
       [
-      InlineKeyboardButton('ENGLISH 🇬🇧', callback_data="START_SI")
+      InlineKeyboardButton('ENGLISH 🇬🇧', callback_data="START_EN")
       ]])
 
 #=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•Epic Bots 2022© All Rights Resived•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=#
