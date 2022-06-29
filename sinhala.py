@@ -75,5 +75,9 @@ SIHELP_MSG = """
        `Epic Developers Community 2022`
 """
 
+SIHelp_backbtn = InlineKeyboardMarkup([[
+                InlineKeyboardButton('ආපසු🔙', callback_data="HELP_BACK")
+            ]])
+
 
 
