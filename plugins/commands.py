@@ -153,6 +153,30 @@ async def tgm(bot, update):
          await update.answer(
              text="මේ සැප ලෝකේ 🤭"
          )
+    elif update.data == "Si_Devs":
+         await update.message.edit_text(
+             text=DEVS_MGSI,
+             reply_markup=DEVS_BTNSI
+         )
+         await update.answer(
+             text="ගැම්මක් තමයි හරිත😌"
+         )
+    elif update.data == "SiDEVS_BAC":
+         await update.message.edit_text(
+             text=SI_STARTM,
+             reply_markup=SI_STARB
+         )
+         await update.answer(
+             text="මේ සැප ලෝකේ 🤭"
+         )
+    elif update.data == "CHANGE_LNG":
+         await update.message.edit_text(
+             text=STARTCMD,
+             reply_markup=COMMAND_LANGBTN
+         )
+         await update.answer(
+             text="මේ සැප ලෝකේ 🤭"
+         )
     elif update.data == "cloce":
         await update.message.delete()
 
