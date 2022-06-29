@@ -286,3 +286,10 @@ Backbuttons = InlineKeyboardMarkup([[
 Back_Msg = "Hi Welcome to **Epic App Store Bot**🎭 ✓Click Help To more Helps⚡"
 
 #=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•Epic Bots 2022© All Rights Resived•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=#
+
+@Client.on_message(filters.text & filters.private)
+async def status(bot, message):
+     await bot.send_message(message.chat.id, f'Search Results For "{message.text}"', reply_markup=InlineKeyboardMarkup([[
+                 InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
+                 ]]
+                  ))
