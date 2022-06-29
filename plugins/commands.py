@@ -185,6 +185,14 @@ async def tgm(bot, update):
          await update.answer(
              text="මේ සැප ලෝකේ 🤭"
          )
+    elif update.data == "back_Clbs":
+         await update.message.edit_text(
+             text=ENSTART_MSG,
+             reply_markup=ENSTART_BTN
+         )
+         await update.answer(
+             text="Menu Backed 🔙"
+         )
     elif update.data == "cloce":
         await update.message.delete()
 
