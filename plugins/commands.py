@@ -135,7 +135,7 @@ async def tgm(bot, update):
              reply_markup=SI_STARB
          )
          await update.answer(
-             text="සාදරයෙන් පිළිගනිමු"
+             text="ස:අපිට අපි ස:ට😏"
          )
     elif update.data == "SIHELP_CLB":
          await update.message.edit_text(
@@ -143,7 +143,15 @@ async def tgm(bot, update):
              reply_markup=SIHelp_backbtn
          )
          await update.answer(
-             text="😎උපකාර"
+             text="ආයි බොක්කෙන්ම ඈ මේ උදව්ව"
+         )
+    elif update.data == "SIHELP_BACK":
+         await update.message.edit_text(
+             text=SI_STARTM,
+             reply_markup=SI_STARB
+         )
+         await update.answer(
+             text="මේ සැප ලෝකේ 🤭"
          )
     elif update.data == "cloce":
         await update.message.delete()
