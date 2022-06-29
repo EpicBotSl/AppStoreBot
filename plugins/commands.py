@@ -113,6 +113,14 @@ async def tgm(bot, update):
          await update.answer(
              text=" Welcome to Help Menu 🌱"
          )
+    elif update.data == "HELP_BACK":
+         await update.message.edit_text(
+             text=ENSTART_MSG,
+             reply_markup=ENSTART_BTN
+         )
+         await update.answer(
+             text="Help Menu Backed 🖐️"
+         )
     elif update.data == "DevsCallback":
          await update.message.edit_text(
              text=DEVS_MG,
