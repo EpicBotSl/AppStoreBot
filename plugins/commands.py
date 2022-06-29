@@ -289,14 +289,8 @@ Back_Msg = "Hi Welcome to **Epic App Store Bot**🎭 ✓Click Help To more Helps
 
 @Client.on_message(filters.text & filters.private)
 async def status(bot, message):
-     await bot.send_message(message.chat.id, f'Search Results For "{message.text}"', reply_markup=InlineKeyboardMarkup([[
-                 InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
+     await bot.send_message(message.chat.id, f'🔥Search Results For **{message.text}**', reply_markup=InlineKeyboardMarkup([[
+                 InlineKeyboardButton("✴️Click Here",switch_inline_query_current_chat=message.text)
                  ]]
                   ))
 
-@Client.on_message(filters.text & filters.group)
-async def statats(bot, message):
-     await bot.send_message(message.chat.id, f'Search Results For "{message.text}"', reply_markup=InlineKeyboardMarkup([[
-                 InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
-                 ]]
-                  ))
