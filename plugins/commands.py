@@ -131,8 +131,8 @@ async def tgm(bot, update):
          )
     elif update.data == "SI_CHANGE":
          await update.message.edit_text(
-             text=ENSTART_MSG,
-             reply_markup=ENSTART_BTN
+             text=STARTCMD,
+             reply_markup=COMMAND_LANGBTN
          )
          await update.answer(
              text="Switch Language 🔄"
