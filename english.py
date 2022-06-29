@@ -28,7 +28,7 @@ helps_msg = """
 ✔𝙰𝚙𝚔 𝙳𝚊𝚝𝚊𝚋𝚊𝚜𝚎 
      ▫ @EpicApkDatabase
      
-                   `</ᴇᴘɪᴄ ʙᴏᴛs <s/ʟ>🇱🇰2022©`
+                  `𝖤𝗉𝗂𝖼 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋𝗌 𝖢𝗈𝗆𝗉𝖺𝗋𝖺𝗍𝗂𝗈𝗇🇱🇰`
 """
 
 Help_backbtn = InlineKeyboardMarkup([[
@@ -48,6 +48,9 @@ Backbuttons = InlineKeyboardMarkup([[
             [
                 InlineKeyboardButton('🔍Search here🔄', switch_inline_query_current_chat=''),
                 InlineKeyboardButton('↗️Go inline↗️', switch_inline_query='')
+            ],
+            [ 
+                InlineKeyboardButton('🔄 Switch Language', callback_data="SI_CHANGE")
             ]
         ])
 
