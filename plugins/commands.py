@@ -135,7 +135,7 @@ async def tgm(bot, update):
              reply_markup=ENSTART_BTN
          )
          await update.answer(
-             text="Menu 🔙"
+             text="Switch Language 🔄"
          )
     elif update.data == "START_SI":
          await update.message.edit_text(
