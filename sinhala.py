@@ -27,8 +27,8 @@ SI_STARB = InlineKeyboardMarkup([[
                 InlineKeyboardButton('උදව්❔', callback_data="SIHELP_CLB")
             ],
             [
-                InlineKeyboardButton('👩‍💻අපගේ ඇප්ප් ඩේටාබේස් එක👩‍💻', url='https://t.me/EpicApkDatabase'),
-                InlineKeyboardButton('බොට් ඩිවලොපර්ස්', callback_data="Si_Devs")
+                InlineKeyboardButton('🔥අපගේ ඇප්ප් ඩේටාබේස් එක🔥', url='https://t.me/EpicApkDatabase'),
+                InlineKeyboardButton('👩‍💻බොට් ඩිවලොපර්ස්👩‍💻', callback_data="Si_Devs")
             ],
             [
                 InlineKeyboardButton('</ᴇᴘɪᴄ ʙᴏᴛs <s/ʟ>🇱🇰', url='https://t.me/EpicBotsSl')
@@ -79,5 +79,20 @@ SIHelp_backbtn = InlineKeyboardMarkup([[
                 InlineKeyboardButton('ආපසු🔙', callback_data="SIHELP_BACK")
             ]])
 
+
+DEVS_BTNSI = InlineKeyboardMarkup([[
+                 InlineKeyboardButton('Navanjana', url='https://t.me/NA_VA_N_JA_NA1'),
+                 InlineKeyboardButton('Wisula', url='https://t.me/wisula4')
+                 ],
+                 [
+                 InlineKeyboardButton('ආපසු 🔙', callback_data="SiDEVS_BAC")
+                 ]]
+                  )
+
+DEVS_MGSI = """ 
+අපි තමයි හැදුවෙ😎 ගැම්මක් නේත?
+ඇයි එහෙම නෙමේද 😑
+කමක් නෑ දුකක් නෑ 👍
+"""
 
 
