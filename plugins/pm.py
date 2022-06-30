@@ -35,19 +35,6 @@ from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG, DATABASE_URI, PRIVATE_
 from utils import Media, unpack_new_file_id
 
 
-@Client.on_message(filters.chat(-1001645328504) & filters.command("info"))
-async def replay_media(bot, message):
-    file = message.reply_to_message
-    reference_id = file.text.split()[2]
-    info = await bot.get_users(user_ids=reference_id)
-    await bot.send_message(message.from_user.id, text=f"""
-    **User Info**
-    
-    **••User id:** [`{info.id}`]
-    **••First Name:** {info.first_name}
-    **••UserName:** @{info.username}
-    
-    """)
 
 @Client.on_message(filters.private & filters.text)
 async def pm_text(bot, message):
@@ -112,8 +99,8 @@ async def pm_media(bot, message):
 @Client.on_message(filters.text)
 async def reply_text(bot, message):
     reference_id = True
-    if message.reply_to_message is not None:
-        file = message.reply_to_message
+    if message.replay_to_message is not None:
+        file = message.replay_to_message
         try:
             reference_id = file.text.split()[2]
         except Exception:
