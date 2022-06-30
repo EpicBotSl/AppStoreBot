@@ -1,8 +1,9 @@
 from pyrogram.types import *
 from pyrogram.errors import *
 from info import *
+from pyrogram import Client, filters
 from pyrogram import *
-from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton 
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton 
 
 
 async def forcesub(bot, update):
