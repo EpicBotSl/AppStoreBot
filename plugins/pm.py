@@ -125,6 +125,44 @@ async def pm_media(bot, message):
         caption=PM_MED_ATT.format(reference_id, message.from_user.mention, msg)
     )
 
+
+@Client.on_message(filters.text)
+async def reply_text(bot, message):
+    reference_id = True
+    if message.reply_to_message is not None:
+        file = message.reply_to_message
+        try:
+            reference_id = file.text.split()[2]
+        except Exception:
+            pass
+        try:
+            reference_id = file.caption.split()[2]
+        except Exception:
+            pass
+        await bot.send_message(
+            text=message.text,
+            chat_id=int(reference_id)
+        )
+
+
+@Client.on_message(filters.media)
+async def replay_media(bot, message):
+    reference_id = True
+    if message.reply_to_message is not None:
+        file = message.reply_to_message
+        try:
+            reference_id = file.text.split()[2]
+        except Exception:
+            pass
+        try:
+            reference_id = file.caption.split()[2]
+        except Exception:
+            pass
+        await bot.copy_message(
+            chat_id=int(reference_id),
+            from_chat_id=message.chat.id,
+            message_id=message.id
+        )
 #=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•Epic Bots 2022© All Rights Resived•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=#
 USER_DETAILS = "<b>PM FROM:</b>\nName: {} {}\nId: {}\nUname: @{}\nScam: {}\nRestricted: {}\nStatus: {}\nDc Id: {}"
 PM_TXT_ATT = "<b>Message from:</b> {}\n<b>Name:</b> {}\n\n{}"
@@ -132,4 +170,4 @@ PM_TXT_ATTS = "<b>Message from:</b> {}\n<b>Name:</b> {}"
 PM_MED_ATT = "<b>Message from:</b> {} \n<b>Name:</b> {}\n<b>Caption</b>:{}"
 LOG_CHANNEL = "-1001645328504"
 #=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•Epic Bots 2022© All Rights Resived•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=#
-
+print("Pm Working")
