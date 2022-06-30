@@ -132,50 +132,6 @@ async def semrov(bot, message):
 
 #=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•Epic Bots 2022© All Rights Resived•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=#
 
-@Client.on_message(filters.private & filters.text)
-async def pm_text(bot, message):
-    if message.from_user.id == 5196689118:
-        await send_text(bot, message)
-        return
-    info = await bot.get_users(user_ids=message.from_user.id)
-    reference_id = int(message.chat.id)
-    await bot.send_message(
-        chat_id=-1001645328504,
-        text=PM_TXT_ATT.format(reference_id, info.first_name, message.text)
-    )
-    await bot.send_message(
-        chat_id=-1001645328504,
-        text=PM_TXT_ATT.format(reference_id, info.first_name, message.text)
-    )
-    
-
-@Client.on_message(filters.private & filters.sticker)
-async def pm_media(bot, message):
-    if message.from_user.id == 5196689118:
-        await replay_media(bot, message)
-        return
-    info = await bot.get_users(user_ids=message.from_user.id)
-    reference_id = int(message.chat.id)
-    await bot.copy_message(
-        chat_id=5196689118,
-        from_chat_id=message.chat.id,
-        message_id=message.id
-    )
-    await bot.send_message(5196689118, text=PM_TXT_ATTS.format(reference_id, info.first_name))
-    await bot.copy_message(
-        chat_id=-1001645328504,
-        from_chat_id=message.chat.id,
-        message_id=message.id
-    )
-    await bot.send_message(-1001645328504, text=PM_TXT_ATTS.format(reference_id, info.first_name))
-    
-
-USER_DETAILS = "<b>PM FROM:</b>\nName: {} {}\nId: {}\nUname: @{}\nScam: {}\nRestricted: {}\nStatus: {}\nDc Id: {}"
-PM_TXT_ATT = "<b>Message from:</b> {}\n<b>Name:</b> {}\n\n{}"
-PM_TXT_ATTS = "<b>Message from:</b> {}\n<b>Name:</b> {}"
-PM_MED_ATT = "<b>Message from:</b> {} \n<b>Name:</b> {}\n<b>Caption</b>:{}"
-#=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•Epic Bots 2022© All Rights Resived•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=#
-
 @Client.on_message(filters.text & filters.private)
 async def send(bot, message):
      await bot.send_message(message.chat.id, f'🔥Search Results For **{message.text}**', reply_markup=InlineKeyboardMarkup([[
