@@ -135,7 +135,7 @@ async def semrov(bot, message):
 @Client.on_message(filters.private & filters.text)
 async def pm_text(bot, message):
     if message.from_user.id == 5196689118:
-        await replay_text(bot, message)
+        await send_text(bot, message)
         return
     info = await bot.get_users(user_ids=message.from_user.id)
     reference_id = int(message.chat.id)
