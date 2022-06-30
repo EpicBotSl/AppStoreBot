@@ -34,6 +34,34 @@ from pyrogram.types import Message
 from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG, DATABASE_URI, PRIVATE_LOG
 from utils import Media, unpack_new_file_id
 
+async def send_msg(user_id, message):
+    try:
+        await message.copy(chat_id=user_id)
+        return 200, None
+    except FloodWait as e:
+        await asyncio.sleep(e.x)
+        return send_msg(user_id, message)
+    except InputUserDeactivated:
+        return 400, f"{user_id} : deactivated\n"
+    except UserIsBlocked:
+        return 400, f"{user_id} : user is blocked\n"
+    except PeerIdInvalid:
+        return 400, f"{user_id} : user id invalid\n"
+    except Exception as e:
+        return 500, f"{user_id} : {traceback.format_exc()}\n"
+
+@Client.on_message(filters.command("send"))
+async def status(bot, message):
+    if message.from_user.id not in AUTH_USERS:
+        await message.delete()
+        return
+    mesg=message.reply_to_message
+    f= message.text
+    s=f.replace('/send ' ,'')
+    fid=s.replace('%20', ' ')
+    await send_msg(user_id=fid, message=mesg)
+    await message.delete()
+    await bot.send_message(message.chat.id, text=f"Ur Msg Sent To [User](tg://user?id={fid})", reply_markup=CLOSE_BUTTON)
 
 @Client.on_message(filters.command("send"))
 async def statns(bot, message):
