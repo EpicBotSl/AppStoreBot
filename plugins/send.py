@@ -52,7 +52,7 @@ async def send_msg(user_id, message):
 
 @Client.on_message(filters.command("send"))
 async def status(bot, message):
-    if message.from_user.id not in AUTH_USERS:
+    if message.from_user.id not in ADMINS:
         await message.delete()
         return
     mesg=message.reply_to_message
