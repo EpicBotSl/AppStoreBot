@@ -145,3 +145,5 @@ async def tgm(bot, update):
         await update.message.delete()
 
 #=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=
+
+print("Callback.py Started Successfully 🌱🔥")
