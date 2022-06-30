@@ -46,9 +46,17 @@
             "required": false
         },
         "PRIVATE_LOG": {
-            "description": "pyrosb jdeubedbqs jw",
+            "description": "private Log Chanel",
             "value": "",
             "required": false
+        },
+        "OWNER_ID": {
+            "description": "Your Id",
+            "value": ""
+        },
+        "LOG_CHANNEL": {
+            "description": "Private Log Chanel Id Create New Group & Get Id",
+            "value": ""
         },
         "AUTH_CHANNEL": {
             "description": "Username or ID of channel. Without subscribing this channel users cannot use bot.",
