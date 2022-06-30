@@ -44,10 +44,10 @@ async def statns(bot, message):
     f= message.text
     s=f.replace('/send ' ,'')
     fid=s.replace('%20', ' ')
-    await send_msg(user_id=fid, message=mesg)
+    await send_message(user_id=fid, message=message)
     await message.delete()
     await bot.send_message(message.chat.id, text=f"Ur Msg Sent To [User](tg://user?id={fid})", reply_markup=CLOSE_BUTTON)
     await bot.send_message(PRIVATE_LOG, text="Massage Sended To User⚡")
-    await send_msg(PRIVATE_LOG, message=mesg)
+    await send_message(PRIVATE_LOG, message=message)
 
 print("Send Py Started Successfully 🔥")
