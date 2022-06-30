@@ -1,6 +1,6 @@
 from pyrogram.types import *
 from pyrogram.errors import *
-from config import *
+from info import *
 from pyrogram import *
 from pyrogram import InlineKeyboardMarkup, InlineKeyboardButton 
 
