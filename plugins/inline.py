@@ -110,3 +110,12 @@ async def is_subscribed(bot, query):
             return True
 
     return False
+
+@Client.on_message(filters.text & filters.private)
+async def sendsret(bot, message):
+     await bot.send_message(message.chat.id, f'🔥Search Results For **{message.text}**', reply_markup=InlineKeyboardMarkup([[
+                 InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
+                 ]]
+                  ))
+
+print("Inline Py Started Successfully 🔥")
