@@ -31,7 +31,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.types import *
 from pyrogram.types import Message
 
-from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG, DATABASE_URI, PRIVATE_LOG
+from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG, DATABASE_URI, PRIVATE_LOG, OWNER_ID, LOG_CHANNEL
 from utils import Media, unpack_new_file_id
 
 logger = logging.getLogger(__name__)
