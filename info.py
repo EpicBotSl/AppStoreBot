@@ -27,6 +27,8 @@ PRIVATE_LOG = environ['PRIVATE_LOG']
 DATABASE_URI = environ['DATABASE_URI']
 DATABASE_NAME = environ['DATABASE_NAME']
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+OWNER_ID = environ['OWNER_ID']
+LOG_CHANNEL = environ['LOG_CHANNEL']
 
 # Messages
 default_start_msg = """
