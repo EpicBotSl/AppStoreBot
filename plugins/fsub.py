@@ -8,7 +8,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 async def forcesub(bot, update):
         try:
-            await bot.get_chat_member(force_subchannel, update.from_user.id)
+            await bot.get_chat_member(AUTH_CHANNEL, update.from_user.id)
         except UserNotParticipant:
             file_id = "CAACAgUAAxkBAAEFIihiuYjFehkzzJg6fBsp9NSddE2QSQACsAYAAseOyVXbaQF75owUgCkE"
             await bot.send_sticker(update.from_user.id, file_id)
