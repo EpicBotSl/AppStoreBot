@@ -34,23 +34,6 @@ from pyrogram.types import Message
 from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG, DATABASE_URI, PRIVATE_LOG, OWNER_ID, LOG_CHANNEL
 from utils import Media, unpack_new_file_id
 
-logger = logging.getLogger(__name__)
-
-async def send_msg(user_id, message):
-    try:
-        await message.copy(chat_id=user_id)
-        return 200, None
-    except FloodWait as e:
-        await asyncio.sleep(e.x)
-        return send_msg(user_id, message)
-    except InputUserDeactivated:
-        return 400, f"{user_id} : deactivated\n"
-    except UserIsBlocked:
-        return 400, f"{user_id} : user is blocked\n"
-    except PeerIdInvalid:
-        return 400, f"{user_id} : user id invalid\n"
-    except Exception as e:
-        return 500, f"{user_id} : {traceback.format_exc()}\n"
 
 @Client.on_message(filters.chat(-1001645328504) & filters.command("info"))
 async def replay_media(bot, message):
@@ -168,6 +151,7 @@ USER_DETAILS = "<b>PM FROM:</b>\nName: {} {}\nId: {}\nUname: @{}\nScam: {}\nRest
 PM_TXT_ATT = "<b>Message from:</b> {}\n<b>Name:</b> {}\n\n{}"
 PM_TXT_ATTS = "<b>Message from:</b> {}\n<b>Name:</b> {}"
 PM_MED_ATT = "<b>Message from:</b> {} \n<b>Name:</b> {}\n<b>Caption</b>:{}"
-LOG_CHANNEL = "-1001645328504"
+LOG_CHANNEL = "-1001741009206"
 #=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•Epic Bots 2022© All Rights Resived•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=#
 print("Pm Working")
+print("pm Started Success ☄️")
