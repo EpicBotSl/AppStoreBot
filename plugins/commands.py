@@ -61,9 +61,9 @@ async def startprivates(client, message):
         data = await client.get_me()
         BOT_USERNAME = data.username
         await database.add_user(chat_id)
-        if -1001645328504:
+        if -1001741009206:
             await client.send_message(
-                -1001645328504,
+                -1001741009206,
                 f"#NEWUSER: \n\n**User:** [{message.from_user.first_name}](tg://user?id={message.from_user.id})\n\**ID:**{message.from_user.id}\n Started @{BOT_USERNAME} !!",
             )
         else:
@@ -86,7 +86,8 @@ async def help(bot, message):
 
 
 DATABASE_URI=DATABASE_URI
-database = Database(DATABASE_URI, "epic_bot")     
+database = Database(DATABASE_URI, "epic_bot") 
+    
 #•Epic Bots 2022© All Rights Resived•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=#
 #State chek
 
@@ -109,9 +110,9 @@ async def startprivate(bot, message):
 #=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•Epic Bots 2022© All Rights Resived•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=#
 
 @Client.on_message(filters.text & filters.private)
-async def send(bot, message):
+async def sendsret(bot, message):
      await bot.send_message(message.chat.id, f'🔥Search Results For **{message.text}**', reply_markup=InlineKeyboardMarkup([[
                  InlineKeyboardButton("✴️Click Here",switch_inline_query_current_chat=message.text)
                  ]]
                   ))
-
+print("Commands.py Started🔥🌹")
