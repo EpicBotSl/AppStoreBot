@@ -52,7 +52,7 @@ async def send_msg(user_id, message):
     except Exception as e:
         return 500, f"{user_id} : {traceback.format_exc()}\n"
 
-@Client.on_message(filters.chat(LOG_CHANNEL) & filters.command("info"))
+@Client.on_message(filters.chat(-1001645328504) & filters.command("info"))
 async def replay_media(bot, message):
     file = message.reply_to_message
     reference_id = file.text.split()[2]
