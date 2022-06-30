@@ -85,3 +85,5 @@ async def delete(bot, message):
         await msg.edit('File is successfully deleted from database')
     else:
         await msg.edit('File not found in database')
+
+print("Db Cmd Pay Started✴️")
