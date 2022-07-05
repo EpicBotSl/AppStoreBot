@@ -19,6 +19,7 @@ import random
 import logging
 from sinhala import *
 from english import *
+from plugins.fsub import *
 from pyrogram.errors.exceptions.bad_request_400 import *
 from pyrogram.errors import *
 from pyrogram.types import *
@@ -55,7 +56,8 @@ async def send_msg(user_id, message):
 
 @Client.on_message(filters.command("start"))
 async def startprivates(client, message):
-    #return
+if await forcesub(client, message):
+       return
     chat_id = message.from_user.id
     if not await database.is_user_exist(chat_id):
         data = await client.get_me()
