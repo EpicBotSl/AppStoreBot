@@ -10,7 +10,7 @@ async def forcesub(bot, update):
         try:
             await bot.get_chat_member(AUTH_CHANNEL, update.from_user.id)
         except UserNotParticipant:
-            file_id = "CAACAgUAAxkBAAEFIihiuYjFehkzzJg6fBsp9NSddE2QSQACsAYAAseOyVXbaQF75owUgCkE"
+            file_id = "CAACAgUAAxkBAAEFLhBiwRivNxzc72HIqCe1jxIBr7-5oAAC9QUAAmAVAVa6G5_a1mBwvCkE"
             await bot.send_sticker(update.from_user.id, file_id)
             text = FORCESUB_TEXT
             reply_markup = FORCESUB_BUTTONS
@@ -19,9 +19,12 @@ async def forcesub(bot, update):
             reply_markup=reply_markup,
             disable_web_page_preview=True) 
 
-FORCESUB_TEXT = "WTF Join Our Chanel humm 😒.."
+FORCESUB_TEXT = """
+        ❌Aƈƈҽʂʂ Dҽɳιҽԃ❌ 
+♻️𝐏𝐥𝐞𝐚𝐬𝐞 𝐉𝐨𝐢𝐧 𝐨𝐮𝐫 𝐜𝐡𝐚𝐧𝐞 & 𝐓𝐫𝐲 𝐚𝐠𝐚𝐢𝐧♻️
+"""
 
 FORCESUB_BUTTONS = InlineKeyboardMarkup([[
-                InlineKeyboardButton('Join Channel☄️', url='https://t.me/EpicBotsSl')
+                InlineKeyboardButton('🔰 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 🔰', url='https://t.me/EpicBotsSl')
             ]])
 print("fsub Working")
