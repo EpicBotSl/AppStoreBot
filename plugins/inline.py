@@ -115,48 +115,18 @@ async def is_subscribed(bot, query):
 async def sendsret(bot, message):
      await message.delete()
      await bot.send_sticker(message.chat.id, Stcr)
-        await update.message.edit_text("Updating....")
-        await update.answer(
-             text="♻️ Updatating Please Wait ♻️",
-        )
-        await update.message.edit("**♻️ Updatating ♻️ -**") 
-        await update.message.edit("**♻️ Updatating ♻️ \**") 
-        await update.message.edit("**♻️ Updatating ♻️ |**")
-        await update.message.edit("**♻️ Updatating ♻️ /**")
-        await update.message.edit("**♻️ Updatating ♻️ -**") 
-        await update.message.edit("**♻️ Updatating ♻️ \**") 
-        await update.message.edit("**♻️ Updatating ♻️ |**")
-        await update.message.edit("**♻️ Updatating ♻️ /**")
-        await update.message.edit("**♻️ Updatating ♻️ -**") 
-        await update.message.edit("**♻️ Updatating ♻️ \**") 
-        await update.message.edit("**♻️ Updatating ♻️ |**")
-        await update.message.edit("**♻️ Updatating ♻️ /**")
-        await update.message.edit("**♻️ Updatating ♻️ -**") 
-        await update.message.edit("**♻️ Updatating ♻️ \**") 
-        await update.message.edit("**♻️ Updatating ♻️ |**")
-        await update.message.edit("**♻️ Updatating ♻️ /**")
-        await update.message.edit("**♻️ Updatating ♻️ -**") 
-        await update.message.edit("**♻️ Updatating ♻️ \**") 
-        await update.message.edit("**♻️ Updatating ♻️ |**")
-        await update.message.edit("**♻️ Updatating ♻️ /**")
-        await update.message.edit("**♻️ Updatating ♻️ -**") 
-        await update.message.edit("**♻️ Updatating ♻️ \**") 
-        await update.answer(
-             text="♻️ Updated ♻️",
-        )
-        await update.message.edit(text="**♻️----Updated----♻️**", reply_markup=Btsn)
-
-
-Btsn = InlineKeyboardMarkup([[
+        await bot.send_message(
+     text = f"Search Results Of **{message.text}**"
+     reply_markup = InlineKeyboardMarkup([[
                  InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
-                 ]])
-##-----await message.reply_text(
-         #text=text,
-         #reply_markup=reply_markup,
-         #disable_web_page_preview=True,
-         #quote=True
-    #)#
-#
+                 ]]))
+     await message.reply_text(
+          text=text,
+          reply_markup=reply_markup,
+          disable_web_page_preview=True,
+          quote=True
+     )
+
 Stcr = "CAACAgUAAxkBAAEFMFxiwtruo0b44KutOBE9H6O5nrwKNAACYgQAAhPCYVbfLxDcnj_pZCkE"
 
 print("Inline Py Started Successfully 🔥")
