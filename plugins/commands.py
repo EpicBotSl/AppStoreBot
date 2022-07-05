@@ -85,6 +85,7 @@ if await forcesub(client, message):
         
 @Client.on_message(filters.command("help"))
 async def help(bot, message):
+  await message.delete()
   await bot.send_sticker(message.chat_id, "CAACAgEAAxkBAAEFMjNixCgfZ2QSo2CR9f-O-jbi2C5KUwACogAEl8MXWi2okCDiQEMpBA")
   await message.reply_photo("https://telegra.ph/file/6b3bee7715543e8fd6afa.jpg",caption=helps_msg,reply_markup=HelpBack_Btn)
 
