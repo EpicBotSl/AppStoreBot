@@ -125,8 +125,8 @@ async def sendsret(bot, message):
 
 NBTN = InlineKeyboardMarkup([[
                  InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
-                 ]]
-                  ))
+                 ]])
+
 Stcr = "CAACAgUAAxkBAAEFMFxiwtruo0b44KutOBE9H6O5nrwKNAACYgQAAhPCYVbfLxDcnj_pZCkE"
 
 print("Inline Py Started Successfully 🔥")
