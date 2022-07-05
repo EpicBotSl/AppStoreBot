@@ -119,7 +119,7 @@ async def sendsret(bot, message):
                  InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
                  ],
                  [
-                 InlineKeyboardButton("Share Result", url=url)
+                 InlineKeyboardButton("Share Result", switch_inline_query='')
                     ]])
      await message.reply_text(
          text=text,
