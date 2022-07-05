@@ -70,7 +70,7 @@ if await forcesub(client, message):
             )
         else:
             logging.info(f"#NewUser :- Name : {message.from_user.first_name} ID : {message.from_user.id}")
-    file_id = "CAACAgQAAxkBAAEFMbFiw9wrdlcj1cnllAWfF3c_EvIC6AAC4RYAAipyxAyMavsmxoF4hSkE"
+    file_id = "CAACAgEAAxkBAAEFMjNixCgfZ2QSo2CR9f-O-jbi2C5KUwACogAEl8MXWi2okCDiQEMpBA"
     await message.delete()
     await client.send_sticker(message.chat.id, file_id)
     text = f"Hi {message.from_user.mention}, 🌼Choose language To Continue "
@@ -85,6 +85,7 @@ if await forcesub(client, message):
         
 @Client.on_message(filters.command("help"))
 async def help(bot, message):
+  await bot.send_sticker(message.chat_id, "CAACAgEAAxkBAAEFMjNixCgfZ2QSo2CR9f-O-jbi2C5KUwACogAEl8MXWi2okCDiQEMpBA")
   await message.reply_photo("https://telegra.ph/file/6b3bee7715543e8fd6afa.jpg",caption=helps_msg,reply_markup=HelpBack_Btn)
 
 
