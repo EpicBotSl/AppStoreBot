@@ -116,7 +116,7 @@ async def sendsret(bot, message):
      await message.delete()
      await bot.send_sticker(message.chat.id, Stcr)
      await bot.send_message(
-      text = f"Search Results Of **{message.text}**"
+      text = f"Search Results Of **{message.text}**",
       reply_markup = InlineKeyboardMarkup([[
                  InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
                  ]]))
