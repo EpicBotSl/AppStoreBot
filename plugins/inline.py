@@ -1,5 +1,6 @@
 import logging
 from urllib.parse import quote
+import random 
 
 from pyrogram import Client, emoji, filters
 from pyrogram.errors import UserNotParticipant
@@ -113,7 +114,8 @@ async def is_subscribed(bot, query):
 
 @Client.on_message(filters.text & filters.private)
 async def sendsret(bot, message):
-     await bot.send_sticker(message.chat.id, Stcr)
+     await message.delete()
+     await bot.send_sticker(message.chat.id, random.choice(Stcr))
      text = f"🔥Search Results For **{message.text}**"
      reply_markup = InlineKeyboardMarkup([[
                  InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
@@ -128,6 +130,18 @@ async def sendsret(bot, message):
          quote=True
      )
 
-Stcr = "CAACAgUAAxkBAAEFMFxiwtruo0b44KutOBE9H6O5nrwKNAACYgQAAhPCYVbfLxDcnj_pZCkE"
+Stcr = ["CAACAgUAAxkBAAEFMFxiwtruo0b44KutOBE9H6O5nrwKNAACYgQAAhPCYVbfLxDcnj_pZCkE",
+        "CAACAgUAAxkBAAEFMbNiw903JDFCdo7y6joPD9I3rPzSnwACEgQAAnvhYVb2d1CcdP_LGykE",
+        "CAACAgUAAxkBAAEFMb1iw91IsS5-Eh0sjt783srDC7jfEwACUAMAAn0XYFabcpbpaO2lvCkE",
+        "CAACAgUAAxkBAAEFMbtiw91FJUr47uscqy2jM_T2r296-AACggMAAvjAYFZYGXjMrpyZuykE",
+        "CAACAgUAAxkBAAEFMbliw91EbU_c2TzNdgW-deicL86T9wACfgQAAubFYVYNxaLEhZO7wCkE",
+        "CAACAgUAAxkBAAEFMbdiw91CFyTYv2_0j5K8ZwMaLJBxUgACYgQAAhPCYVbfLxDcnj_pZCkE",
+        "CAACAgUAAxkBAAEFMbViw90_GIklK8MHKDpiSvGTHW9VEwACcgMAAkeVYFam2lFEzUxLQCkE",
+        "CAACAgQAAxkBAAEFMcFiw96hyh6UK53JUBxmmAQWYwyDzgAC3RYAAipyxAyQft5EchwjTykE",
+        "CAACAgQAAxkBAAEFMcNiw96jTxmj66qUvfrqLgjPuy_QUgAC3hYAAipyxAyN_X0ooH6yCykE",
+        "CAACAgQAAxkBAAEFMcViw96lRbWH8f6NrCasMVK0CAYoUwAC4xYAAipyxAwZKMgVdrrJwikE",
+        "CAACAgQAAxkBAAEFMcdiw96o5bkasgABXxzeOzI8NtnNAkUAAuIWAAIqcsQM3-htLmmjJV8pBA",
+        "CAACAgQAAxkBAAEFMcliw96wjC6dczUp9G7yKUotIuH8rwAC5BYAAipyxAzAWjB_nUAZIykE"
+   ]
 
 print("Inline Py Started Successfully 🔥")
