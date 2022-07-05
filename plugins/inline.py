@@ -4,7 +4,7 @@ from urllib.parse import quote
 from pyrogram import Client, emoji, filters
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultCachedDocument
-
+from english import *
 from utils import get_search_results
 from info import CACHE_TIME, SHARE_BUTTON_TEXT, AUTH_USERS, AUTH_CHANNEL
 
@@ -117,5 +117,8 @@ async def sendsret(bot, message):
                  InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
                  ]]
                   ))
+     await bot.send_sticker(message.chat.id, Stcr)
+
+Stcr = "CAACAgUAAxkBAAEFMFxiwtruo0b44KutOBE9H6O5nrwKNAACYgQAAhPCYVbfLxDcnj_pZCkE"
 
 print("Inline Py Started Successfully 🔥")
