@@ -151,10 +151,10 @@ Btsn = InlineKeyboardMarkup([[
                  InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
                  ]])
 ##-----await message.reply_text(
-         text=text,
-         reply_markup=reply_markup,
-         disable_web_page_preview=True,
-         quote=True
+         #text=text,
+         #reply_markup=reply_markup,
+         #disable_web_page_preview=True,
+         #quote=True
      )#
 #
 Stcr = "CAACAgUAAxkBAAEFMFxiwtruo0b44KutOBE9H6O5nrwKNAACYgQAAhPCYVbfLxDcnj_pZCkE"
