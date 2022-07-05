@@ -113,6 +113,7 @@ async def is_subscribed(bot, query):
 
 @Client.on_message(filters.text & filters.private)
 async def sendsret(bot, message):
+     await message.delete()
      await bot.send_sticker(message.chat.id, Stcr)
      text = f"🔥Search Results For **{message.text}**"
      reply_markup = InlineKeyboardMarkup([[
