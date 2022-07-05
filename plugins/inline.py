@@ -115,17 +115,15 @@ async def is_subscribed(bot, query):
 async def sendsret(bot, message):
      await bot.send_sticker(message.chat.id, Stcr)
      text = f"🔥Search Results For **{message.text}**"
-     reply_markup = NBTN
+     reply_markup = InlineKeyboardMarkup([[
+                 InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
+                 ]])
      await message.reply_text(
          text=text,
          reply_markup=reply_markup,
          disable_web_page_preview=True,
          quote=True
      )
-
-NBTN = InlineKeyboardMarkup([[
-                 InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
-                 ]])
 
 Stcr = "CAACAgUAAxkBAAEFMFxiwtruo0b44KutOBE9H6O5nrwKNAACYgQAAhPCYVbfLxDcnj_pZCkE"
 
