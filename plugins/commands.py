@@ -68,7 +68,8 @@ async def startprivates(client, message):
             )
         else:
             logging.info(f"#NewUser :- Name : {message.from_user.first_name} ID : {message.from_user.id}")
-    file_id = "CAACAgUAAxkBAAEFIihiuYjFehkzzJg6fBsp9NSddE2QSQACsAYAAseOyVXbaQF75owUgCkE"
+    file_id = "CAACAgQAAxkBAAEFMbFiw9wrdlcj1cnllAWfF3c_EvIC6AAC4RYAAipyxAyMavsmxoF4hSkE"
+    await message.delete()
     await client.send_sticker(message.chat.id, file_id)
     text = f"Hi {message.from_user.mention}, 🌼Choose language To Continue "
     reply_markup = COMMAND_LANGBTN
@@ -98,7 +99,7 @@ async def startprivate(bot, message):
     count = await bot.get_chat_members_count(-1001620454933)
     counta = await bot.get_chat_members_count(-1001620454933)
     text=f"""**🏅Bot Total Users**
-**Members Count In Bot & Chane**
+**Members Count In Bot & Chanel**
 ╔═════════════════════════════════════════════╗
    **🌱Chanel Members**  🏅`{count}`
    **⚡Epic App Store Bot Users**  🏅`{countb}`
