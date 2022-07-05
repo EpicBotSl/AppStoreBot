@@ -117,7 +117,10 @@ async def sendsret(bot, message):
      text = f"🔥Search Results For **{message.text}**"
      reply_markup = InlineKeyboardMarkup([[
                  InlineKeyboardButton("Click Here",switch_inline_query_current_chat=message.text)
-                 ]])
+                 ],
+                 [
+                 InlineKeyboardButton("Share Result", url=url)
+                    ]])
      await message.reply_text(
          text=text,
          reply_markup=reply_markup,
