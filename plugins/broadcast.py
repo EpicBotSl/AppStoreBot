@@ -100,7 +100,7 @@ async def bchanl(bot, update, broadcast_ids={}):
     if failed == 0:
         await bot.send_message(-1001741009206, f"broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed.")
     else:
-        await bot.send_document(-1001620454933, 'broadcastlog.txt', caption=f"broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed.")
+        await bot.send_document(-1001741009206, 'broadcastlog.txt', caption=f"broadcast completed in `{completed_in}`\n\nTotal users {total_users}.\nTotal done {done}, {success} success and {failed} failed.")
     os.remove('broadcastlog.txt') 
 
 print("Broadcast py Started Successfully 🌟")
