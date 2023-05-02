@@ -26,3 +26,4 @@ dnspython
 python-dotenv
 psutil
 heroku3
+coroutine
