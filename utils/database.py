@@ -3,6 +3,7 @@ import logging
 import datetime
 
 import motor.motor_asyncio
+import coroutine
 
 from pymongo.errors import DuplicateKeyError
 from umongo import Instance, Document, fields
