@@ -1,11 +1,12 @@
 import re
 from os import environ
+import os
 
 id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-USER_SESSION = environ.get('USER_SESSION', 'User_Bot')
+USER_SESSION = environ['User_Bot']
 API_ID = environ['API_ID']
 API_HASH = environ['API_HASH']
 BOT_TOKEN = environ['BOT_TOKEN']
