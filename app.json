@@ -52,11 +52,11 @@
         },
         "OWNER_ID": {
             "description": "Your Id",
-            "value": ""
+            "value": "5196689118"
         },
         "LOG_CHANNEL": {
             "description": "Private Log Chanel Id Create New Group & Get Id",
-            "value": ""
+            "value": "-1001645328504"
         },
         "AUTH_CHANNEL": {
             "description": "Username or ID of channel. Without subscribing this channel users cannot use bot.",
